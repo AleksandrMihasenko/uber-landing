@@ -21,10 +21,18 @@ header {
 
 .title {
     margin-top: 38px;
+    margin-bottom: 0;
     color: #222222;
     font-size: 38px;
     font-weight: 700;
     text-transform: uppercase;
+    text-align: center;
+}
+
+.subtitle {
+    color: #222222;
+    font-size: 17px;
+    font-weight: 400;
     text-align: center;
 }
 
@@ -201,5 +209,74 @@ nav {
         font-size: 15px;
         font-weight: 300;
         line-height: 21px;
+    }
+}
+
+.mobile {
+    min-height: 864px;
+    padding: 48px 0 79px 0;
+    background: url("../images/mobile-background.jpg") center (center/cover) no-repeat;
+
+    .row {
+        margin-top: 32px;
+    }
+
+    &__item {
+        position: relative;
+        width: 320px;
+        height: 280px;
+        margin: 0 auto;
+        margin-bottom: 19px;
+        padding-top: 91px;
+
+        &-1 {
+            background: url("../images/mobile-item-1.png") center (center/cover) no-repeat;
+        }
+
+        &-2 {
+            background: url("../images/mobile-item-2.png") center (center/cover) no-repeat;
+        }
+
+        &-3 {
+            background: url("../images/mobile-item-3.png") center (center/cover) no-repeat;
+        }
+
+        &-4 {
+            background: url("../images/mobile-item-4.png") center (center/cover) no-repeat;
+        }
+
+        &-5 {
+            background: url("../images/mobile-item-5.png") center (center/cover) no-repeat;
+        }
+
+        &-6 {
+            background: url("../images/mobile-item-6.png") center (center/cover) no-repeat;
+        }
+
+        &-subtitle {
+            color: #ffffff;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 31px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        &-plus {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            bottom: 35px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 26px;
+            height: 26px;
+            background-color: #000000;
+            margin: 0 auto;
+            border-radius: 100%;
+            padding: 6px;
+            cursor: pointer;
+        }
     }
 }
