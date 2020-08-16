@@ -1,3 +1,10 @@
+@mixin btn_hover {
+    &:hover {
+        background-image: none;
+        background-color: #1eacc7;
+    }
+}
+
 * {
     font-family: 'Roboto', sans-serif;
 }
@@ -142,6 +149,8 @@ nav {
         font-size: 14px;
         font-weight: 400;
         text-transform: uppercase;
+
+        @include btn_hover;
     }
 }
 
@@ -166,8 +175,7 @@ nav {
         font-weight: 700;
         text-transform: uppercase;
         line-height: 36px;
-        margin: 0;
-        margin-top: 22px;
+        margin: 22px 0 0;
     }
 
     &__descr {
@@ -192,6 +200,8 @@ nav {
         font-size: 18px;
         font-weight: 400;
         text-transform: uppercase;
+
+        @include btn_hover;
     }
 }
 
@@ -249,8 +259,7 @@ nav {
         position: relative;
         width: 320px;
         height: 280px;
-        margin: 0 auto;
-        margin-bottom: 19px;
+        margin: 0 auto 19px;
         padding-top: 91px;
 
         &-1 {
@@ -301,6 +310,34 @@ nav {
             border-radius: 100%;
             padding: 6px;
             cursor: pointer;
+
+            &:before {
+                content: '';
+                display: block;
+                width: 14px;
+                height: 2px;
+                background-color: #1eacc7;
+                transition: 0.3s all;
+            }
+
+            &:after {
+                position: absolute;
+                content: '';
+                display: block;
+                width: 2px;
+                height: 14px;
+                background-color: #1eacc7;
+                left: 50%;
+                transform: translateX(-50%);
+                transition: 0.3s all;
+            }
+
+            &:hover {
+                &:before,
+                &:after {
+                    background-color: #ff5656;
+                }
+            }
         }
     }
 }
@@ -335,5 +372,70 @@ nav {
         font-weight: 300;
         line-height: 24px;
         text-align: center;
+    }
+}
+
+.require {
+    padding: 68px 0 84px 0;
+
+    &__block {
+        margin: 33px 0;
+
+        &_nmb {
+            margin-bottom: 0;
+        }
+    }
+
+    &__title {
+        color: #1ca8c3;
+        font-size: 22px;
+        font-weight: 400;
+    }
+
+    &__list {
+        list-style: none;
+        padding-left: 50px;
+        margin-top: 22px;
+
+        li {
+            position: relative;
+            font-size: 17px;
+            font-weight: 300;
+            line-height: 24px;
+            margin-bottom: 10px;
+
+            &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                left: -32px;
+                top: 3px;
+                width: 21px;
+                height: 20px;
+                background: url("../images/check-blue.png") center (center/cover) no-repeat;
+            }
+        }
+    }
+
+    &__descr {
+        margin-top: 25px;
+        font-size: 17px;
+        line-height: 24px;
+        color: #1ca8c3;
+        font-weight: 300;
+    }
+
+    .warning {
+        .require__title {
+            color: #ff5656;
+        }
+
+        .require__list {
+            li {
+                &:before {
+                    background: url("../images/check-red.png");
+                }
+            }
+        }
     }
 }
