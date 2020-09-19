@@ -87,6 +87,10 @@ nav {
     }
 }
 
+.hamburger {
+    display: none;
+}
+
 .subheader {
     position: absolute;
     width: 100%;
@@ -551,4 +555,8 @@ footer {
             text-align: center;
         }
     }
+}
+
+.xs-visible {
+    display: none;
 }
