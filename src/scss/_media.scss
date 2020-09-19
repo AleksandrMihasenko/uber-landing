@@ -38,6 +38,11 @@
             width: 300px;
         }
     }
+
+    .choice {
+        padding: 55px 0;
+        min-height: 840px;
+    }
 }
 
 @media (max-width: 991px) {
@@ -100,6 +105,14 @@
 
         &__descr {
             margin-top: 20px;
+        }
+    }
+
+    .choice {
+        min-height: 800px;
+
+        &_image {
+            width: 100%;
         }
     }
 
@@ -245,7 +258,7 @@
 @media (max-width: 575px) {
 
     .subheader {
-        top: -30px;
+        top: -25px;
         height: 60px;
 
         &__official {
@@ -273,7 +286,7 @@
 
     .promo {
         min-height: 400px;
-        padding: 83px 0 35px 0;
+        padding: 110px 0 35px 0;
 
         &__descr {
             display: none;
@@ -333,6 +346,15 @@
             font-size: 16px;
             text-align: center;
             margin-bottom: 10px;
+        }
+    }
+
+    .choice {
+
+        .title {
+            font-size: 32px;
+            line-height: 32px;
+            margin-bottom: 15px;
         }
     }
 }
